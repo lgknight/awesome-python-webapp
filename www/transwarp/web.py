@@ -245,7 +245,7 @@ class StaticFileRoute(object):
 		fpath = os.path.join(ctx.application.document_root, args[0])
 		print fpath
 		if not os.path.isfile(fpath):
-			raise notfound
+			raise notfound()
 		fext = os.path.splitext(fpath)[0]
 		ctx.reponse.content_type = mimetypes.types_map.get(fext.lower(), 'application/cotet-stream')
 		return _static_file_generator(fpath) 

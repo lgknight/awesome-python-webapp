@@ -224,7 +224,3 @@ def insert(table, **kw):
 
 if '__main__' == __name__:
 	logging.basicConfig(level = logging.DEBUG)
-	create_engine(user = 'root', passwd = 'root', db = 'library')
-	user = dict(username = 'b', password = 'b', unit = 1)
-	insert('users', **user)
-
